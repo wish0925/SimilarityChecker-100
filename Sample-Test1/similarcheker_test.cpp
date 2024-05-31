@@ -7,6 +7,12 @@ TEST(LengthCheck, LengthSame) {
 	EXPECT_EQ(60, sc.getLengthScore());
 }
 
+TEST(LengthCheck, LengthSame2) {
+	similarChecker sc("apple", "pilot");
+	sc.checkLength();
+	EXPECT_EQ(60, sc.getLengthScore());
+}
+
 TEST(LengthCheck, LengthDiff1) {
 	similarChecker sc("apple", "appl");
 	sc.checkLength();
